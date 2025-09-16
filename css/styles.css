@@ -243,6 +243,16 @@ body {
     border-top: 1px solid #ffa31a;
     margin: 1.5rem 0;
 }
+.carrusel-dimension {
+  max-width: 1000px; /* Cambia este valor para el ancho */
+  max-width: 650px;    /* Cambia este valor para la altura */
+  margin: 0 auto;
+}
+.carrusel-dimension .carousel-inner,
+.carrusel-dimension .carousel-item img {
+  height: 650px;    /* Igual que el alto del carrusel */
+  object-fit: cover;
+}
 @media (max-width: 991px) {
     .main-hero {
         min-height: 40vh;
