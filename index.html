@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoderHub.run</title>
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="icon" type="image/x-icon" href="Assets/images/logoCoder.jpg">
+</head>
+<body>
+    <script>
+function animateCounter(id, end, duration) {
+    let start = 0;
+    const step = Math.ceil(end / (duration / 2));
+    const el = document.getElementById(id);
+    const timer = setInterval(() => {
+        start += step;
+        if (start >= end) {
+            el.textContent = end;
+            clearInterval(timer);
+        } else {
+            el.textContent = start;
+        }
+    }, 20);
+}
+window.onload = function() {
+    animateCounter('clientes', 120, 1200);
+    animateCounter('proyectos', 45, 1200);
+    animateCounter('anios', 10, 1200);
+};
+</script>
+
+    <a href="https://wa.me/573124860459" class="whatsapp-float" target="_blank" title="¡Chatea con nosotros por WhatsApp!">
+    <img src="Assets/images/whasaplogo.png" alt="WhatsApp" style="width:60px; height:60px;">
+</a>
+    <video autoplay loop muted playsinline id="bg-video">
+        <source src="Assets/videos/fondo.mp4" type="video/mp4">
+        
+    </video>
+    <header>
+        <nav class="navbar navbar-expand-lg custom-navbar-ph">
+            <div class="container-fluid d-flex align-items-center">
+                <!-- Botón hamburguesa a la izquierda -->
+                <button class="navbar-toggler order-0 me-2 custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Logo tipo "hub" -->
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <span class="logo-ph">
+                        <span class="logo-ph-black">Coder</span><span class="logo-ph-orange">Hub</span>
+                    </span>
+                </a>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active"  aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="portafolio.html">Portafolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+                   
+        <section class="container main-hero py-5">
+            <div class="row align-items-center" style="min-height: 60vh;">
+                <!-- Columna izquierda: Bienvenida -->
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="bienvenida-box p-4 animate__animated animate__fadeInLeft text-start">
+                        <h1 class="mb-3" style="font-weight:bold;">Bienvenido a CoderHub.run</h1>
+                        <p class="lead mb-4">¡Impulsando tu desarrollo digital!</p>
+                        <div class="text-center">
+                            <a href="contacto.html" class="btn btn-warning btn-lg animate__animated animate__pulse animate__infinite">Contáctanos</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Columna derecha: Contadores -->
+                <div class="col-lg-6">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-4 mb-3 mb-md-0">
+                            <div class="contador-box text-center">
+                                <div class="contador-numero" id="clientes">0</div>
+                                <div class="contador-label">Clientes satisfechos</div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 mb-3 mb-md-0">
+                            <div class="contador-box text-center">
+                                <div class="contador-numero" id="proyectos">0</div>
+                                <div class="contador-label">Proyectos ejecutados</div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="contador-box text-center">
+                                <div class="contador-numero" id="anios">0</div>
+                                <div class="contador-label">Años de experiencia</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer-coderhub py-5">
+    <div class="container">
+        <div class="row align-items-center text-white">
+            <!-- Logo y descripción -->
+            <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+                <img src="Assets/images/logoCoder.jpg" alt="Logo CoderHub.run" style="width:180px; border-radius: 20px;">
+                <p class="mt-3 mb-1">Agencia experta en desarrollo web y marketing digital con más de 10 años de experiencia.</p>
+            </div>
+            <!-- Datos de contacto -->
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h5 class="fw-bold mb-3">Datos de contacto</h5>
+                <div class="mb-2">
+                    <a href="#" class="footer-social me-2"><img src="Assets/images/facebok.png" alt="Facebook" width="32"></a>
+                    <a href="#" class="footer-social"><img src="Assets/images/logolinkedin.jpg" alt="LinkedIn" width="32"></a>
+                </div>
+                <div class="mb-2 fw-bold" style="font-size:1.3rem;">320 2757157</div>
+                <div class="mb-2 fw-bold" style="font-size:1.3rem;">318 7573009</div>
+                <div class="mb-2"><img src="Assets/images/correobueno.png" width="18" style="margin-right:6px;"> info@coderhub.run</div>
+                <div><img src="Assets/images/direcci.png" width="18" style="margin-right:6px;"> Calle 70 No. 69 I - 28 - Bogotá, DC.</div>
+            </div>
+            <!-- Horario de atención -->
+            <div class="col-md-4">
+                <h5 class="fw-bold mb-3">Horario de atención</h5>
+                <div class="mb-2"><img src="Assets/images/relog.png" width="18" style="margin-right:6px;"> 8:00AM - 5:30PM, Lunes a Viernes</div>
+                <div class="mb-3"><img src="Assets/images/relog.png" width="18" style="margin-right:6px;"> 9:00AM - 2:00PM, Sábados</div>
+                <a href="https://wa.me/573124860459" class="btn btn-gradient-orange px-4 py-2 fw-bold" target="_blank">HABLAR CON UN ASESOR</a>
+            </div>
+        </div>
+        <hr class="footer-line my-4">
+        <div class="row">
+            <div class="col-12 text-center text-white-50 small">
+                Diseño e implementación CoderHub.run &copy; 2025. Todos los derechos reservados.
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="lib/js/bootstrap.min.js" ></script>
+</body>
+</html>
